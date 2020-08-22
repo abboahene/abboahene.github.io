@@ -1,0 +1,55 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+img{
+    width:100%;
+}
+img.rounded-circle.z-index-2{
+    width: 50px;
+}
+a.nav-link:hover{
+    background:black;
+    color:white !important;
+}
+.love{
+    background:url('../images/love.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.yinyang{
+    background:url('../images/yinyang.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.learner{
+    background:url('../images/concentric.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.poet{
+    background:url('../images/elk.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+button.navbar-toggler:focus{
+    border: 3px solid black !important;
+    box-shadow: none;
+}
+footer{
+    background:black;
+}
+.dim:hover{
+    color:rgb(167, 167, 167) !important;
+}
+.mar{
+    margin: auto 12vw;
+}
+@media(max-width:700px){
+    .mar{
+        margin: auto 0;
+    }
+}
