@@ -12,13 +12,13 @@ a.nav-link:hover{
     color:white !important;
 }
 .love{
-    background:url('../images/love.svg');
+    background:url('../images/love.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
 }
 .yinyang{
-    background:url('../images/yinyang.svg');
+    background:url('../images/yinyang.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
