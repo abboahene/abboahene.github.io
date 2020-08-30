@@ -48,6 +48,13 @@ footer{
 .mar{
     margin: auto 12vw;
 }
+.designer:hover{
+    animation: pop 400ms linear 1;
+    cursor: pointer;
+}
+@keyframes pop{
+    50%  {transform: scale(1.4);}
+}
 @media(max-width:700px){
     .mar{
         margin: auto 0;
