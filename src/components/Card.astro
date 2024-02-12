@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  image: string;
+  href: string;
+}
+
+const { href, title, body, image } = Astro.props;
+---
+
+<li class="link-card">
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">{title}</h2>
+      <p>{body}</p>
+      <div class="card-actions">
+        <button class="btn btn-primary">Open</button>
+      </div>
+    </div>
+    <figure class="px-10 pt-10">
+      <img src={image} alt="img" class="rounded-xl" />
+    </figure>
+  </div>
+</li>

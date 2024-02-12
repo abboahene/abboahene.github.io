@@ -1,0 +1,5 @@
+{
+    "python.analysis.fixAll": [],
+    "prettier.useEditorConfig": false,
+    "path-intellisense.mappings": {}
+}

@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Sidebar from "../components/Sidebar.astro";
+---
+
+<Layout title="✊|ABB">
+  <div class="flex bg-[#EFF0F4]">
+    <Sidebar />
+    <main class="w-4/5 h-screen h-100vh pt-16">
+      <ul role="list" class="grid grid-cols-2 gap-3">
+        <Card
+          href="https://docs.astro.build/"
+          title="Documentation"
+          body="Learn how Astro works and explore the official API docs."
+		  image="https://placehold.co/600x400"
+        />
+        <Card
+          href="https://docs.astro.build/"
+          title="Documentation"
+          body="Learn how Astro works and explore the official API docs."
+		  image="https://placehold.co/600x400"
+        />
+      </ul>
+    </main>
+  </div>
+</Layout>
