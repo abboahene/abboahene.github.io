@@ -1,7 +1,6 @@
 ### Had to make it - My personal website with Astro
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
+> 🧑‍🚀 **Let's go!!!**
 #### 🚀 Project Structure
 
 ```text
