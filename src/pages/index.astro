@@ -1,18 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Sidebar from "../components/Sidebar.astro";
 import Hero from "../components/Hero.astro";
 import Articles from "../components/Articles.astro";
 ---
 
 <Layout title="✊|ABB">
-  <div class="flex bg-[#EFF0F4]">
-    <Sidebar />
-    <main class="w-4/5 h-full pt-16 pl-4 pr-24">
-      <Hero />
-      <section class="featured mb-16">
-        <h2 class=" text-md font-semibold mb-4">Featured</h2>
+  <main class="h-full">
+    <Hero />
+    <section class="featured mb-16">
+      <h2 class="text-md font-semibold mb-4">Featured</h2>
       <ul role="list" class="grid grid-cols-2 gap-3">
         <Card
           href="https://docs.astro.build/"
@@ -27,8 +24,7 @@ import Articles from "../components/Articles.astro";
           image="https://placehold.co/600x400"
         />
       </ul>
-      </section>
-      <Articles/>
-    </main>
-  </div>
+    </section>
+    <Articles maxCols={1} />
+  </main>
 </Layout>
