@@ -6,25 +6,23 @@ import Articles from "../components/Articles.astro";
 ---
 
 <Layout title="✊|ABB">
-  <main class="h-full">
-    <Hero />
-    <section class="featured mb-16">
-      <h2 class="text-md font-semibold mb-4">Featured</h2>
-      <ul role="list" class="grid grid-cols-2 gap-3">
-        <Card
-          href="https://docs.astro.build/"
-          title="Documentation"
-          body="Learn how Astro works and explore the official API docs."
-          image="https://placehold.co/600x400"
-        />
-        <Card
-          href="https://docs.astro.build/"
-          title="Documentation"
-          body="Learn how Astro works and explore the official API docs."
-          image="https://placehold.co/600x400"
-        />
-      </ul>
-    </section>
-    <Articles maxCols={1} />
-  </main>
+  <Hero />
+  <section class="featured mb-16">
+    <h2 class="text-md font-semibold mb-4">Featured</h2>
+    <ul role="list" class="grid grid-cols-2 gap-3">
+      <Card
+        href="https://docs.astro.build/"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+        image="https://placehold.co/600x400"
+      />
+      <Card
+        href="https://docs.astro.build/"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+        image="https://placehold.co/600x400"
+      />
+    </ul>
+  </section>
+  <Articles maxCols={1} />
 </Layout>

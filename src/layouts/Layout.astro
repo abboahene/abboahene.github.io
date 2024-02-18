@@ -18,40 +18,16 @@ import Sidebar from "../components/Sidebar.astro";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-[#EFF0F4] min-h-screen">
+  <body>
     <Header />
-    <div class="flex pt-16 pl-4 pr-24 flex-nowrap">
-      <Sidebar />
-      <slot />
+    <div class="flex pl-4 pr-24 flex-nowrap">
+      <aside class="h-full sticky top-[48px]">
+        <Sidebar />
+      </aside>
+      <main class="basis-10/12 pl-4 pt-8">
+        <slot />
+      </main>
     </div>
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
+
