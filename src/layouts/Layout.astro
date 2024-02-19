@@ -3,13 +3,16 @@ interface Props {
   title: string;
 }
 
-const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+
 import Header from "./../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -17,14 +20,15 @@ import Sidebar from "../components/Sidebar.astro";
     <link rel="icon" type="image/svg+xml" href="/my-logo-B-yellow.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+     <ViewTransitions />
   </head>
-  <body>
+  <body class="text-black">
     <Header />
     <div class="flex pl-4 pr-24 flex-nowrap">
-      <aside class="h-full sticky top-[48px]">
+      <aside class="h-full sticky top-[48px] pt-4">
         <Sidebar />
       </aside>
-      <main class="basis-10/12 pl-4 pt-8">
+      <main class="basis-10/12 pl-4 pt-4">
         <slot />
       </main>
     </div>
