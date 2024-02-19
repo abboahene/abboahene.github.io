@@ -15,9 +15,7 @@ const { href, title, body, image } = Astro.props;
     <div class="card-side flex flex-row gap-2">
       <div class="card-side flex flex-col gap-2">
         <p class="text-sm">{body}</p>
-        <button class="btn w-1/6 btn-sm border-gray-300"
-          >Open</button
-        >
+        <button class="btn w-1/6 btn-sm border-gray-300">Open</button>
       </div>
       <figure class="card-side basis-2/6">
         <img src={image} alt="img" class="rounded-xl" />
