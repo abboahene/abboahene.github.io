@@ -16,3 +16,8 @@ code {
     Courier New,
     monospace;
 }
+
+a:active {
+  background: #DADCE1 !important;
+  color: initial !important;
+}
