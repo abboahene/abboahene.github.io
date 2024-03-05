@@ -1,9 +1,55 @@
 ---
+import { Icon } from "astro-icon/components";
+import mePlayingPiano from "../assets/benefo.jpeg";
+
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="✊|About">
   <section class="featured mb-16">
-    <h2 class="text-md font-semibold mt-8 mb-4">About(WIP)</h2>
+    <h2 class="text-md font-semibold mt-8 mb-4">About</h2>
+    <div class="flex gap-10">
+      <div class="basis-4/12">
+        <img class="rounded-sm" src={mePlayingPiano.src} alt="playing piano" />
+      </div>
+      <div class="basis-4/12 py-8 flex flex-col justify-center">
+        <h2 class="text-3xl font-semibold mb-4">Hi, I am Benefo.</h2>
+        <p class="text-sm mb-4">
+          I am a software engineer with a penchant for creative problem solving.
+          I am currently persueing my Master's in Computer Science at MIU. This
+          has come as a huge opportunity to add more to my current knowledge and
+          I can't wait to offer my quota to the existing impactful systems in
+          the world.
+        </p>
+        <p class="text-sm mb-4">
+          If you don't find me studying or struggling with a competetive
+          programming question or reading a book or connecting with some cool
+          people, then I might just be thinking about this beautiful lady back
+          in Ghana.
+        </p>
+        <p class="text-sm mb-4">
+          I have an earnest drive to have a positive effect on the people around
+          me because, through out my journey, it has been the inspiration of the
+          greats that has constantly thrust me forward.
+        </p>
+        <p class="text-sm mb-4">
+          I am always eager to connect with like-minded individuals. Feel free to
+          send an <a
+            class="text-[#0f6cbd] font-semibold"
+            target="_blank"
+            href="mailto:alfredboahene.7@gmail.com">email</a
+          > or a message on <a
+            href="https://www.linkedin.com/in/alfred-boahene-benefo"
+            target="_blank"
+            class="text-[#0f6cbd] font-semibold">LinkedIn</a
+          >.
+        </p>
+        <div class="flex gap-2">
+          <a href="https://github.com/abboahene"><Icon name="mdi:github" size={20} /></a>
+          <a href="https://www.linkedin.com/in/alfred-boahene-benefo"><Icon name="mdi:linkedin" size={20} /></a>
+          <!-- <a href=""><Icon name="mdi:twitter" size={20} /></a> -->
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
