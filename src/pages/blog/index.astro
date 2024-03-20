@@ -1,6 +1,19 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Article from "../../components/Article.astro";
+import Articles from "../../components/Articles.astro";
+
+const articles: any[] = (await getCollection('blog')).sort(
+  (a: any, b: any) => b.data.pubDate!.valueOf() - a.data.pubDate!.valueOf(),
+)
+
+const articleList: any[] = articles.map((post) => ({
+  link: `/blog/${post.slug}`,
+  meta: post.data.pubDate,
+  title: post.data.title,
+  tags: post.data.tags,
+}))
+
 ---
 
 <Layout title="✊|Articles">
@@ -9,8 +22,7 @@ import Article from "../../components/Article.astro";
     <div
       class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
     >
-      <Article />
-      <Article />
+      <Articles articleList={articleList}/>
       <!-- More posts... -->
     </div>
   </section>

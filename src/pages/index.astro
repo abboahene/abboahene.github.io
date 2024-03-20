@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
-import Articles from "../components/Articles.astro";
+import Article from "../components/Article.astro";
 ---
 
 <Layout title="✊|ABB">
@@ -24,5 +24,13 @@ import Articles from "../components/Articles.astro";
       />
     </ul>
   </section>
-  <Articles maxCols={1} />
+  <section class="articles mb-16">
+    <div
+      class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
+    >
+      <Article data/>
+      <Article  data/>
+      <!-- More posts... -->
+    </div>
+  </section>
 </Layout>

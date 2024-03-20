@@ -1,0 +1,32 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const articles = (await getCollection("blog")).sort(
+    (a: any, b: any) => a.data.pubDate!.valueOf() - b.data.pubDate!.valueOf()
+  );
+
+  return articles.map((article: any, index: number) => ({
+    params: { slug: article.slug },
+    props: { article, previous: articles[index - 1] },
+  }));
+}
+
+type Props = {
+  article: CollectionEntry<"blog">;
+  previous?: CollectionEntry<"blog">;
+};
+
+const { article, previous } = Astro.props;
+const { Content, headings } = await article.render();
+
+const dev = process.env.NODE_ENV !== "production";
+---
+
+<Layout title="✊|Articles">
+  <section class="articles mb-16">
+    <h2 class="text-md font-semibold mt-8 mb-4">{article}</h2>
+    <Content />
+  </section>
+</Layout>
