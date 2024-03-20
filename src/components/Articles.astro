@@ -1,14 +1,21 @@
 ---
 import Article from "./Article.astro";
+
+interface Props {
+  articleList: any[];
+}
+
+const { articleList } = Astro.props
+console.log(articleList);
+
 ---
 
 <section class="articles mb-16">
-  <h2 class="text-md font-semibold mb-4">Articles</h2>
   <div
-    class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
+    class="flex flex-col gap-4"
   >
-    <Article />
-    <Article />
+    {articleList.map(article => <Article data={article}/>)}
+    <!-- <Article /> -->
     <!-- More posts... -->
   </div>
 </section>
