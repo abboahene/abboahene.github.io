@@ -3,29 +3,20 @@ interface Props {
   title: string;
 }
 
-import { ViewTransitions } from 'astro:transitions';
-
 import Header from "./../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
+import HtmlHead from '../components/HtmlHead.astro';
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" transition:animate="none">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/my-logo-B-yellow.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-     <ViewTransitions />
-  </head>
+  <HtmlHead title={title} />
   <body class="text-black">
     <Header />
     <div class="flex pl-4 pr-24 flex-nowrap">
-      <aside class="h-full sticky top-[48px] pt-4">
+      <aside class="h-full sticky top-[48px] pt-7">
         <Sidebar />
       </aside>
       <main class="basis-10/12 pl-4 pt-4">
