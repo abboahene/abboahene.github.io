@@ -1,25 +1,43 @@
 ---
+import { Icon } from "astro-icon/components";
+
 interface Props {
   title: string;
   body: string;
-  image: string;
-  href: string;
+  image?: string;
+  url: string;
+  githubUrl?: string;
 }
 
-const { href, title, body, image } = Astro.props;
+const { title, body, image, url, githubUrl } = Astro.props;
 ---
 
 <li class="border w-full bg-white hover:shadow-md rounded-xl">
-  <div class="p-4 gap-4">
-    <h2 class="font-bold text-base border-b pb-2">{title}</h2>
-    <div class="flex flex-row gap-2 pt-3">
-      <div class="flex flex-col gap-2 justify-between">
+  <div class="p-4 flex flex-col">
+    <h2 class="flex font-bold text-base border-b pb-2">
+      <span class="mr-1">{title}</span>
+      {
+        githubUrl && (
+          <a href={githubUrl}>
+            <Icon name="mdi:github" size={20} />
+          </a>
+        )
+      }
+    </h2>
+    <div class="flex flex-row gap-2 pt-3 justify-between">
+      <div class="flex flex-col gap-2 justify-between basis-5/6">
         <p class="text-sm">{body}</p>
-        <button class="w-1/6 bg-[#dedede] rounded-md font-semibold p-1">Open</button>
       </div>
       <figure class="basis-2/6">
-        <img src={image} alt="img" class="rounded-xl" />
+        <img class="p-1 border rounded-xl" src={image} alt="img" />
       </figure>
+    </div>
+    <div>
+      <a
+        href={url}
+        class="float-left bg-gradient-to-r from-[#0f6cbd] to-[#3c45ab] rounded-xl text-white font-semibold py-0.5 px-2 hover:bg-gradient-to-r hover:to-[#0f6cbd] hover:from-[#3c45ab]"
+        >Open</a
+      >
     </div>
   </div>
 </li>

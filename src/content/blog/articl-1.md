@@ -1,6 +1,7 @@
 ---
 title: Placehoder
 description: Lets's go
+category: Study
 pubDate: 'Jun 14 2024'
 ---
 

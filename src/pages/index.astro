@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Article from "../components/Article.astro";
+
+import projects from "../util/projects.db";
 ---
 
 <Layout title="✊|ABB">
@@ -11,16 +13,18 @@ import Article from "../components/Article.astro";
     <h2 class="text-md font-semibold mb-4">Featured</h2>
     <ul role="list" class="grid grid-cols-2 gap-3">
       <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-        image="https://placehold.co/600x400"
+        title={projects[0].title}
+        body={projects[0].description}
+        image={projects[0].image}
+        url={projects[0].url}
+        githubUrl={projects[0].githubUrl}
       />
       <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-        image="https://placehold.co/600x400"
+        title={projects[1].title}
+        body={projects[1].description}
+        image={projects[1].image}
+        url={projects[1].url}
+        githubUrl={projects[1].githubUrl}
       />
     </ul>
   </section>
@@ -28,8 +32,8 @@ import Article from "../components/Article.astro";
     <div
       class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
     >
-      <Article data/>
-      <Article  data/>
+      <Article data />
+      <!-- <Article data /> -->
       <!-- More posts... -->
     </div>
   </section>
