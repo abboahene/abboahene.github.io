@@ -12,7 +12,7 @@ const projects: Projects[] = [
   {
     title: "Code and Cocktails",
     description:
-      "My friends and I created an event to bring together all techies and designers across Africa. And we built our own ticketing system.",
+      "My friends and I created an event to bring together all software devs and designers across Africa. And we built our own ticketing system.",
     url: "https://www.codeandcocktails.live/",
     githubUrl: "",
     image: codeAndCocktailsImage.src,
