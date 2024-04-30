@@ -12,8 +12,10 @@ console.log(articleList);
 
 <section class="articles mb-16">
   <div
-    class="flex flex-col gap-4"
+    class="flex flex-col flex-wrap gap-4"
   >
+    {articleList.map(article => <Article data={article}/>)}
+    {articleList.map(article => <Article data={article}/>)}
     {articleList.map(article => <Article data={article}/>)}
     <!-- <Article /> -->
     <!-- More posts... -->

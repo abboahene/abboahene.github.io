@@ -5,13 +5,10 @@ import Card from "../../components/Card.astro";
 import projects from "./../../util/projects.db";
 ---
 
-<Layout title="✊|Articles">
-  <section class="articles mb-16">
-    <h2 class="text-md font-semibold mt-8 mb-4">Projects</h2>
-    <div
-      class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
-    >
-      <ul role="list" class="grid grid-cols-2 gap-3">
+<Layout title="✊|Projects">
+  <section class="cards mb-16">
+    <h2 class="text-md font-semibold mt-4 md:mt-8 mb-4">Projects</h2>
+    <ul role="list" class="grid md:grid-cols-2 gap-3">
         {
           projects.map((project) => (
             <Card
@@ -23,8 +20,7 @@ import projects from "./../../util/projects.db";
             />
           ))
         }
-      </ul>
       <!-- More posts... -->
-    </div>
+    </ul>
   </section>
 </Layout>

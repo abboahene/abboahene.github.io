@@ -1,9 +1,15 @@
 ---
 import NavLink from "./NavLink.astro";
 import { Icon } from "astro-icon/components";
+
+interface Props {
+  hide?: boolean;
+}
+
+const { hide = false } = Astro.props
 ---
 
-<div>
+<div class:list={{"hidden": hide}}>
   <!-- <div class="ml-[8px]">
       <button class="btn btn-info btn-sm rounded-full"> + Neutral</button>
     </div> -->

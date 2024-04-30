@@ -4,10 +4,10 @@ import { Icon } from "astro-icon/components";
 const today = new Date();
 ---
 
-<div
-  class="flex bg-dark text-white text-sm min-h-[48px] py-4 px-10 m-10 rounded-xl"
+<footer
+  class="flex bg-dark text-white text-sm min-h-[100px] md:min-h-[48px] py-4 px-5 md:px-10 md:m-10 rounded-xl"
 >
-  <div class="flex w-full justify-between items-center">
+  <div class="flex gap-2 w-full justify-between items-center">
     <div class="flex flex-col text-[12px]">
       <div>
         &copy;{today.getFullYear()} Alfred Benefo Boahene. All rights reserved.
@@ -29,4 +29,4 @@ const today = new Date();
       >
     </div>
   </div>
-</div>
+</footer>

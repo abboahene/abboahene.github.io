@@ -9,9 +9,9 @@ import projects from "../util/projects.db";
 
 <Layout title="✊|ABB">
   <Hero />
-  <section class="featured mb-16">
+  <section class="featured mb-10 md:mb-16">
     <h2 class="text-md font-semibold mb-4">Featured</h2>
-    <ul role="list" class="grid grid-cols-2 gap-3">
+    <ul role="list" class="flex flex-wrap md:flex-nowrap gap-3">
       <Card
         title={projects[0].title}
         body={projects[0].description}
@@ -28,7 +28,8 @@ import projects from "../util/projects.db";
       />
     </ul>
   </section>
-  <section class="articles mb-16">
+  <section class="articles mb-10 md:mb-16">
+    <h2 class="text-lg font-semibold mb-4">Blogs</h2>
     <div
       class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
     >
