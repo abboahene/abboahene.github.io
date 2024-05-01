@@ -13,11 +13,16 @@
   "dependencies": {
     "@astrojs/check": "^0.5.2",
     "@astrojs/mdx": "^2.2.3",
+    "@astrojs/react": "^3.3.1",
     "@astrojs/rss": "^4.0.5",
     "@iconify-json/mdi": "^1.1.64",
     "@shikijs/transformers": "^1.2.4",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.3.5",
     "astro-icon": "^1.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
     "typescript": "^5.3.3"
