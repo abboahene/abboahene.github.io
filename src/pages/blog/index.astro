@@ -9,8 +9,10 @@ const articles: any[] = (await getCollection('blog')).sort(
 
 const articleList: any[] = articles.map((post) => ({
   link: `/blog/${post.slug}`,
-  meta: post.data.pubDate,
+  pubDate: post.data.pubDate,
   title: post.data.title,
+  description: post.data.description,
+  category: post.data.category,
   tags: post.data.tags,
 }))
 
@@ -18,7 +20,7 @@ const articleList: any[] = articles.map((post) => ({
 
 <Layout title="✊|Articles">
   <section class="articles mb-16">
-    <h2 class="text-md font-semibold mt-4 md:mt-8 mb-4">Articles(WIP)</h2>
+    <h2 class="text-md font-semibold mt-4 md:mt-8 mb-4">Articles</h2>
     <div
       class="flex"
     >

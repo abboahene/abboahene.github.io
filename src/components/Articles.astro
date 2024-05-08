@@ -6,8 +6,6 @@ interface Props {
 }
 
 const { articleList } = Astro.props
-console.log(articleList);
-
 ---
 
 <section class="articles mb-16">
@@ -15,9 +13,5 @@ console.log(articleList);
     class="flex flex-col flex-wrap gap-4"
   >
     {articleList.map(article => <Article data={article}/>)}
-    {articleList.map(article => <Article data={article}/>)}
-    {articleList.map(article => <Article data={article}/>)}
-    <!-- <Article /> -->
-    <!-- More posts... -->
   </div>
 </section>

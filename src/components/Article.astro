@@ -1,6 +1,16 @@
 ---
+import formatDate from '../util/format-date'
+
+type dataType = {
+  link: string,
+  pubDate: Date,
+  title: string,
+  description: string,
+  category: string,
+  tags?: []
+}
 interface Props {
-  data: any;
+  data: dataType;
 }
 
 const { data } = Astro.props;
@@ -11,20 +21,18 @@ const { data } = Astro.props;
     class="flex flex-col max-w-xl items-start justify-between border p-5 rounded-xl bg-white hover:shadow-md"
   >
     <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+      <time datetime="2020-03-16" class="text-gray-500">{formatDate(data.pubDate)}</time>
       <span
         class="relative rounded-full bg-gradient-to-r from-[#0f6cbd] to-[#3c45ab] text-white px-3 py-1.5 font-medium"
-        >Marketing</span
+        >{data.category}</span
       >
     </div>
     <div class="group relative">
       <h3 class="mt-3 text-lg font-semibold leading-6">
-          Boost your conversion rate
+        {data.title}
       </h3>
       <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-        Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae
-        illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem
-        placeat consectetur nulla deserunt vel. Iusto corrupti dicta.
+        {data.description}
       </p>
     </div>
   </article>

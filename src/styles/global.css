@@ -96,7 +96,6 @@ html {
       Courier,
       monospace;
     font-size: 12px;
-    background-color: #f6f8fa;
     border-radius: 3px;
     padding: 3px 6px;
   }
@@ -104,7 +103,7 @@ html {
   pre {
     background-color: #f6f8fa;
     border-radius: 3px;
-    padding: 10px;
+    padding: 20px;
     overflow-x: auto;
   }
 
