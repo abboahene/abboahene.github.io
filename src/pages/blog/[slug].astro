@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
   const articles = (await getCollection("blog")).sort(
@@ -24,9 +25,9 @@ const { Content, headings } = await article.render();
 const dev = process.env.NODE_ENV !== "production";
 ---
 
-<Layout title="✊|Articles">
-  <section class="article mb-16">
-    <h2 class="text-md font-semibold mt-8 mb-4">{article}</h2>
-    <Content />
+<BlogLayout title="✊|Articles">
+  <section class="article mb-16 md:w-[700px]">
+      <h2 class="text-md font-semibold mt-8 mb-4">{article}</h2>
+      <Content />
   </section>
-</Layout>
+</BlogLayout>

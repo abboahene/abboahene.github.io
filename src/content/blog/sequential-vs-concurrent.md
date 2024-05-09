@@ -7,15 +7,15 @@ pubDate: 'May 8 2024'
 
 # Sequential vs. Concurrent Programming: Understanding Their Impact on Performance Using Java
 
-A few weeks ago, I learned about **Concurrent Programming**. My interest was piqued while studying the [Functional programming paradigm](https://en.wikipedia.org/wiki/Functional_programming) and how it takes a different perspective on writing programs as opposed to the [Imperative style](https://en.wikipedia.org/wiki/Imperative_programming) I have long known.
+A few weeks ago, I learned about **Concurrent Programming**. My interest was piqued while studying the [functional programming](https://en.wikipedia.org/wiki/Functional_programming) paradigm and how it takes a different perspective on writing programs as opposed to the [imperative style](https://en.wikipedia.org/wiki/Imperative_programming) I have long known.
 
-It is always mind-blowing to learn about perspectives that help shape the way we think about both problems and solutions.
+It always mind-blowing for me when learn about new perspectives that help shape the way we think about both problems and solutions.
 
-Let us define some keywords for this article:
+Let’s define some keywords for this journey:
 
 ### Threads
 
-Threads can be thought of as lines of execution within a process. Threads enable us to achieve concurrency/parallelism for a set of tasks in a program. It allows for tasks to be executed “at the same time”.
+Threads can be thought of as lines of execution within a process running on your computer. Threads enable us to achieve concurrency/parallelism for a set of tasks in a program. It simply allows for tasks to be executed “at the same time”.
 
 ### Sequential programs
 
@@ -25,16 +25,16 @@ Sequential programs are single-threaded programs, which means all tasks are exec
 
 Concurrent programs have multiple threads of operation working on different parts of the same data input with the aim of increasing performance and responsiveness for the system.
 
-You can think of it this way: when you have a task to be done and you divide it among your friends and work on it at the same time to finish in time, that is the concurrent approach.
+You can think of it this way: when you have a task to be done and you divide it among your friends and work on it at the same time to finish it faster, that is the concurrent approach.
 
 ### Parallel Execution
 
 At this point, it is worth noting the difference between parallel execution and concurrent execution.
-Technically, concurrent tasks are executed at the same time, but not simultaneously. 
+Technically, **concurrent** tasks are executed at the same time, but not simultaneously. 
 
-Computers normally allocate time slices to concurrent tasks and then context switch between the various tasks to simulate the idea of them being run at the same time.
+Computers normally allocate time-slices to tasks and then context switch between the various tasks to simulate the idea of them being run at the same time (concurrently).
 
-Parallel execution happens when a computer with multiple cores executes tasks independently on different cores. In this case, the execution is done simultaneously, and results are obtained faster.
+**Parallel execution** happens when a computer with multiple cores executes tasks independently on different cores. In this case, the execution is done simultaneously, and results are obtained faster.
 
 ### Why don’t we always use concurrent systems then?
 
@@ -46,7 +46,7 @@ It just so happens that there are scenarios in programming where using the concu
 
 This came as a surprise to me at first, so I decided to write a small Java program to explore the reasons behind this phenomenon.
 
-> I believe that one of the hallmarks of a good software engineer (or any engineer in this regard) is analyzing the current situation, choosing the best-fit solution for the problem at hand, and collecting feedback from that. It is not enough for me to know the standards, I have to know when to use or not use the standards.
+> I believe that one of the hallmarks of a good software engineer (or any engineer in this regard), is analyzing the current situation, choosing the best-fit solution for the problem at hand, and collecting feedback from that. It is not enough for me to know the standards, I have to know when to use or not use the standards.
 **- Me**
 > 
 
@@ -175,7 +175,7 @@ I decided to run the program on two computers with very different specifications
 **Computer B:**
 0.5-core vCPU, 0.5 GiB RAM
 
-As you can see Computer B has very limited resources, only half of a CPU core and 0.5 GiB RAM while Computer A is the rich guy in this test with a whooping 11-core CPU and 18 GiB RAM.
+As you can see **Computer B** has very limited resources, only half of a CPU core and 0.5 GiB RAM while **Computer A** is the rich guy in this test with a whooping 11-core CPU and 18 GiB RAM.
 
 ### **Computer A output:**
 
@@ -231,12 +231,9 @@ This is because, sometimes, for relatively small datasets, overheads of creating
 For huge data sizes (10M and 100M), the time difference significantly widens and is seen to be consistent across the last two datasets for this on **Computer A**.
 Since there is a huge data input and enough resources, it appears the overhead of creating and managing threads is not significant enough to negatively impact the overall operation and therefore concurrency wins (this time).
 
-<aside>
-💡 Note: For <strong>Computer B</strong>, I adjusted the sizes of the datasets for the program to avoid overloading the heap memory due to the limited resources.
-
-But don’t worry this does not incline our test to any bias since we are interested in the time difference between the sequential operations and the concurrent ones.
-
-</aside>
+> 💡 Note: For **Computer B,** I adjusted the sizes of the datasets for the program to avoid overloading the heap memory due to it’s limited resources. 
+Don’t worry, this does not incline our test to any bias since we are interested in the time difference between the sequential operation and the concurrent one for each data input.
+> 
 
 ### **Computer B output:**
 
@@ -284,13 +281,13 @@ Total: 30,000,000.00
 Took 367ms to complete
 ```
 
-What did you observe as the dataset size increased?
+What did you observe as the data size increased?
 
-Interestingly, it seems as the dataset sizes increased the concurrent one is rather losing the race and at an increasing margin. Throughout the test, the sequential computation wins and continues to win with significant differences in performance for data sizes from 800k to 30M. And because of this, it is safe to assume this may happen in larger data inputs.
+Interestingly, it seems as the data size increased the concurrent one is rather losing the race and at an increasing margin. Throughout the test, the sequential computation wins and continues to win with significant differences in performance for data sizes from 800k to 30M. And because of this, it is safe to assume this may happen in larger data inputs.
 
 So What might be wrong?
 
-Technically speaking, the concurrent program on **Computer B** does not create new threads in parallel because there are no other cores unlike in **Computer A**. It rather allocates time slices to the thread processes and context switches between them to achieve concurrency.
+Technically speaking, the concurrent program on **Computer B** can not create new threads in **parallel** because there are no other cores unlike in **Computer A**. It rather allocates time slices to the thread processes and context switches between them to achieve concurrency.
 
 Simply put, the system specifications of **Computer B:** having a limited CPU and only half a Gigabyte of RAM, are not enough resources to efficiently create and maintain multiple threads.
 
@@ -299,6 +296,7 @@ Simply put, the system specifications of **Computer B:** having a limited CPU an
 Overall, this analysis proves that it is important to understand the scope of your problem and
 consider problem specifications (the data size and system requirements) when choosing/creating solutions (in this case, sequential or concurrent solutions).
 
-For me, this experiment brought me one step closer to understanding how computers work and improving my observation sense when it comes to solving problems in different environments.
-Initially, the idea that a multi-threaded program would perform worse than a sequential one seemed a bit counter-intuitive, but after exploring the scope of the subjects, I got to understand the reasons behind it.
-You can click [here](https://github.com/abboahene/threads-performance/blob/main/src/Main.java) to view the performance test source code in github.
+For me, this experiment brought me one step closer to understanding how computers actually work and improving my observation sense when it comes to solving problems in different environments.
+Initially, the idea that a multi-threaded program would perform worse than a sequential one seemed a bit counter-intuitive, but after exploring the scope of the subject, I got to understand the reasons behind it.
+
+You can click [here](https://github.com/abboahene/threads-performance/blob/main/src/Main.java) to view the source code, don’t forget to star if you like it.

@@ -20,8 +20,8 @@ const { title } = Astro.props;
   <body class="text-black">
     <Header />
     <Loader />
-    <div class="flex flex-nowrap md:pl-4 md:pr-24">
-      <aside transition:animate="fade" class="sidebar h-full sticky top-[52px] pt-7 hidden md:block">
+    <div class="flex flex-nowrap md:pl-4">
+      <aside transition:animate="fade" class="sidebar flex-basis-[200px] h-full sticky top-[52px] pt-7 hidden md:block">
         <Sidebar />
       </aside>
 
@@ -29,7 +29,7 @@ const { title } = Astro.props;
       <aside class="mobile-sidebar z-49 h-full w-2/3 bg-white fixed top-[48px] pt-7 pl-5 hidden md:hidden">
         <Sidebar />
       </aside>
-      <main class="close-sidebar w-full px-5 md:basis-10/12 md:pr-0 md:pl-4 pt-4">
+      <main class="close-sidebar w-full px-5 md:pr-0 md:pl-4 pt-4">
         <slot />
       </main>
     </div>

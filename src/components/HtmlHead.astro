@@ -3,15 +3,30 @@ interface Props {
   title: string;
 }
 
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 const { title } = Astro.props;
+
+const production = process.env.NODE_ENV === "production";
 ---
+
+<!-- (gtag.js) -->{
+  production && (
+    <>
+      <script
+        is:inline
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-BB8H8RXCSS"
+      />
+      <script is:inline src="../util/analytics.js" />
+    </>
+  )
+}
 
 <meta charset="UTF-8" />
 <meta name="description" content="Astro description" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/svg+xml" href="/my-logo-B-yellow.svg" />
 <meta name="generator" content={Astro.generator} />
+<ViewTransitions />
 <title>{title}</title>
- <ViewTransitions />
