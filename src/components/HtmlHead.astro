@@ -12,12 +12,16 @@ const production = process.env.NODE_ENV === "production";
 ---
 
 <!-- (gtag.js) -->{
+  production && (
+    <>
       <script
         is:inline
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-BB8H8RXCSS"
       />
-      <script is:inline src="../util/analytics.js" />
+      <script is:inline async src="../util/analytics.js" />
+    </>
+  )
 }
 
 <meta charset="UTF-8" />
