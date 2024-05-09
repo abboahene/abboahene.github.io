@@ -1,13 +1,12 @@
 ---
+import { getCollection } from "astro:content";
+
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Article from "../components/Article.astro";
 
 import projects from "../util/projects.db";
-
-import { getCollection } from "astro:content";
-import { map } from "astro/zod";
 
 const articles: any[] = (await getCollection('blog')).sort(
   (a: any, b: any) => b.data.pubDate!.valueOf() - a.data.pubDate!.valueOf(),
@@ -23,7 +22,7 @@ const articleList: any[] = articles.map((post) => ({
 }))
 ---
 
-<Layout title="✊|ABB" description="Welcome, explore and learn and know a little about me 🚀">
+<Layout title="✊|ABB" description="Welcome, explore and learn and know a little about me ✊">
   <Hero />
   <section class="featured mb-10 md:mb-16">
     <h2 class="text-md font-semibold mb-4">Featured</h2>
@@ -49,7 +48,7 @@ const articleList: any[] = articles.map((post) => ({
     <div
       class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
     >
-      {articleList.map( article => <Article data={article} />)}
+      {articleList.forEach( article => <Article data={article} />)}
       <!-- <Article data /> -->
       <!-- More posts... -->
     </div>
