@@ -1,6 +1,6 @@
 ---
 title: "Sequential vs. Concurrent Programming"
-description: Exploring the performance difference between concurrent and sequencial programs
+description: Exploring the performance difference between concurrent and sequencial programs.
 category: Interesting
 pubDate: 'May 8 2024'
 ---
