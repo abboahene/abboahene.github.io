@@ -1,6 +1,7 @@
 ---
 interface Props {
   title: string;
+  description: string;
 }
 
 import Header from "./../components/Header.astro";
@@ -9,13 +10,13 @@ import Sidebar from "../components/Sidebar.astro";
 import HtmlHead from "../components/HtmlHead.astro";
 import Loader from "../components/Loader.astro";
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <HtmlHead title={title} />
+    <HtmlHead title={title} description={description}/>
   </head>
   <body class="text-black">
     <Header />

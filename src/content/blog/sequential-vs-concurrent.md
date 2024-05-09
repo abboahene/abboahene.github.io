@@ -2,7 +2,7 @@
 title: "Sequential vs. Concurrent Programming"
 description: Exploring the performance difference between concurrent and sequencial programs.
 category: Interesting
-pubDate: 'May 8 2024'
+pubDate: 'May 9 2024'
 ---
 
 # Sequential vs. Concurrent Programming: Understanding Their Impact on Performance Using Java

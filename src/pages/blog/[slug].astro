@@ -1,6 +1,5 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
@@ -21,11 +20,9 @@ type Props = {
 
 const { article, previous } = Astro.props;
 const { Content, headings } = await article.render();
-
-const dev = process.env.NODE_ENV !== "production";
 ---
 
-<BlogLayout title="✊|Articles">
+<BlogLayout headings={headings} {...article}>
   <section class="article mb-16 md:w-[700px]">
       <h2 class="text-md font-semibold mt-8 mb-4">{article}</h2>
       <Content />
