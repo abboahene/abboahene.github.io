@@ -48,7 +48,7 @@ const articleList: any[] = articles.map((post) => ({
     <div
       class="mx-auto flex max-w-2xl gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-1"
     >
-      {articleList.forEach( article => <Article data={article} />)}
+      {articleList.map( article => <Article data={article} />)}
       <!-- <Article data /> -->
       <!-- More posts... -->
     </div>
