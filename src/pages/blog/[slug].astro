@@ -20,11 +20,33 @@ type Props = {
 
 const { article, previous } = Astro.props;
 const { Content, headings } = await article.render();
+
+const production = process.env.NODE_ENV === "production";
 ---
 
 <BlogLayout headings={headings} {...article}>
   <section class="article mb-16 md:w-[700px]">
       <h2 class="text-md font-semibold mt-8 mb-4">{article}</h2>
       <Content />
+      <br>
+      <br>
+      {!production && 
+        <script is:inline src="https://giscus.app/client.js"
+          data-repo="abboahene/abboahene.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkyODc1ODA2NjY="
+          data-category="Blog Interractions"
+          data-category-id="DIC_kwDOESQh-s4CfR9h"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+        </script>
+      }
   </section>
 </BlogLayout>
