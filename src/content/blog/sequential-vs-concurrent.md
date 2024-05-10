@@ -21,7 +21,8 @@ You can think of it this way: when you have a task to be done and you divide it 
 
 ### Thread
 
-A **thread** is the smallest unit of execution is computer system. A signle task(precess) can be broken up into multiple threads and each would work on different parts of the same task.
+A **thread** is the smallest unit of execution is computer system. A signle task(precess) can be broken up into multiple **threads** and each would work on different parts of the same task.
+
 Remember the task you divided among your friends? In that case, each of your friends is a **thread** working on different parts of the task you were assigned 🧵.
 
 ### Sequential programs
