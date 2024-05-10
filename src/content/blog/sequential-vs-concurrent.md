@@ -9,7 +9,7 @@ pubDate: 'May 9 2024'
 
 A few weeks ago, I learned about **Concurrent Programming**. My interest was piqued while studying the [functional programming](https://en.wikipedia.org/wiki/Functional_programming) paradigm and how it takes a different perspective on writing programs as opposed to the [imperative style](https://en.wikipedia.org/wiki/Imperative_programming) I have long known.
 
-I am always blown away when learn about new perspectives that help shape the way we think about both problems and solutions.
+I am always blown away when I learn about new perspectives that help shape the way we think about both problems and solutions.
 
 Let’s define some keywords for this journey:
 
@@ -21,7 +21,7 @@ You can think of it this way: when you have a task to be done and you divide it 
 
 ### Thread
 
-A **thread** is the smallest unit of execution is computer system. A signle task(precess) can be broken up into multiple **threads** and each would work on different parts of the same task.
+A **thread** is the smallest unit of execution is computer system. A signle task(process) can be broken up into multiple **threads** and each would work on different parts of the same task.
 
 Remember the task you divided among your friends? In that case, each of your friends is a **thread** working on different parts of the task you were assigned 🧵.
 
