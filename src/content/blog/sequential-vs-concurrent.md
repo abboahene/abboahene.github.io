@@ -7,7 +7,7 @@ pubDate: 'May 9 2024'
 
 # Sequential vs. Concurrent Programming: Understanding Their Impact on Performance Using Java
 
-A few weeks ago, I learned about **Concurrent Programming**. My interest was piqued while studying the [functional programming](https://en.wikipedia.org/wiki/Functional_programming) paradigm and how it takes a different perspective on writing programs as opposed to the [imperative style](https://en.wikipedia.org/wiki/Imperative_programming) I have long known.
+A few weeks ago, I learned about **Concurrent Programming**. My interest was piqued while studying the <a href="https://en.wikipedia.org/wiki/Functional_programming" target="blank">functional programming</a> paradigm and how it takes a different perspective on writing programs as opposed to the <a href="https://en.wikipedia.org/wiki/Imperative_programming" target="blank">imperative style</a> I have long known.
 
 I am always blown away when I learn about new perspectives that help shape the way we think about both problems and solutions.
 
