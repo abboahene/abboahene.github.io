@@ -5,15 +5,16 @@ import mdx from "@astrojs/mdx";
 import { transformerNotationDiff, transformerNotationHighlight } from "@shikijs/transformers";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
-
 import react from "@astrojs/react";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://abboahene.github.io",
   integrations: [UnoCSS({
     injectReset: true
-  }), icon(), mdx(), react()],
+  }), icon(), mdx(), react(), partytown()],
   markdown: {
     shikiConfig: {
       themes: {

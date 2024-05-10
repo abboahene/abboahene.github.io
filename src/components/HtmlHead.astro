@@ -1,28 +1,19 @@
 ---
+import Analytics from "./Analytics.astro"
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   title: string;
   description: string;
 }
-
-import { ViewTransitions } from "astro:transitions";
 
 const { title, description } = Astro.props;
 
 const production = process.env.NODE_ENV === "production";
 ---
 
-<!-- (gtag.js) -->{
-  production && (
-    <>
-      <script
-        is:inline
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-BB8H8RXCSS"
-      />
-      <script is:inline async src="../util/analytics.js" />
-    </>
-  )
-}
+<!-- (gtag.js) -->
+{production && <Analytics />}
 
 <meta charset="UTF-8" />
 <meta name="description" content={description} />
