@@ -9,23 +9,26 @@ pubDate: 'May 9 2024'
 
 A few weeks ago, I learned about **Concurrent Programming**. My interest was piqued while studying the [functional programming](https://en.wikipedia.org/wiki/Functional_programming) paradigm and how it takes a different perspective on writing programs as opposed to the [imperative style](https://en.wikipedia.org/wiki/Imperative_programming) I have long known.
 
-It always mind-blowing for me when learn about new perspectives that help shape the way we think about both problems and solutions.
+I am always blown away when learn about new perspectives that help shape the way we think about both problems and solutions.
 
 Let’s define some keywords for this journey:
 
-### Threads
+### Concurrent programs
 
-Threads can be thought of as lines of execution within a process running on your computer. Threads enable us to achieve concurrency/parallelism for a set of tasks in a program. It simply allows for tasks to be executed “at the same time”.
+Concurrent programs have multiple **threads** of operation working on different parts of the same data input with the aim of increasing performance and responsiveness for the system.
+
+You can think of it this way: when you have a task to be done and you divide it among your friends and work on it at the same time to finish it faster, that is the concurrent approach.
+
+### Thread
+
+A **thread** is the smallest unit of execution is computer system. A signle task(precess) can be broken up into multiple threads and each would work on different parts of the same task.
+Remember the task you divided among your friends? In that case, each of your friends is a **thread** working on different parts of the task you were assigned 🧵.
 
 ### Sequential programs
 
 Sequential programs are single-threaded programs, which means all tasks are executed in a step-by-step manner, and the next task is only executed when the current one is done.
 
-### Concurrent programs
-
-Concurrent programs have multiple threads of operation working on different parts of the same data input with the aim of increasing performance and responsiveness for the system.
-
-You can think of it this way: when you have a task to be done and you divide it among your friends and work on it at the same time to finish it faster, that is the concurrent approach.
+Threads enable us to achieve concurrency/parallelism for a set of tasks in a program. It simply allows for tasks to be executed “at the same time”.
 
 ### Parallel Execution
 
