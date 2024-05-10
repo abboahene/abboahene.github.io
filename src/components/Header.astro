@@ -5,7 +5,21 @@ import logo from "../assets/my-logo-white.svg";
 import "../styles/global.css"; // import global css here so it affects every page
 ---
 
-<div class="flex items-center text-white bg-[#000] min-h-[48px] sticky top-0 z-50 px-[1.5rem]">
-  <Icon name="mdi:menu" size={20} class="hamburger mr-4 md:hidden"/>
-  <a href="#" class="text-xl text-white"><img width="50px" src={logo.src} /></a>
+<div
+  class="flex justify-between items-center text-white bg-[#000] min-h-[48px] sticky top-0 z-50 px-[1.5rem]"
+>
+  <div>
+    <Icon name="mdi:menu" size={20} class="hamburger mr-4 md:hidden" />
+    <a href="#" class="text-xl text-white">
+      <img width="50px" src={logo.src} />
+    </a>
+  </div>
+  <div class="flex gap-1">
+    <a href="https://github.com/abboahene"
+      ><Icon name="mdi:github" size={20} /></a
+    >
+    <a href="https://www.linkedin.com/in/alfred-boahene-benefo"
+      ><Icon name="mdi:linkedin" size={20} /></a
+    >
+  </div>
 </div>

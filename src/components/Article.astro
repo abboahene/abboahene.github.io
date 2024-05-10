@@ -1,14 +1,14 @@
 ---
-import formatDate from '../util/format-date'
+import formatDate from "../util/format-date";
 
 type dataType = {
-  link: string,
-  pubDate: Date,
-  title: string,
-  description: string,
-  category: string,
-  tags?: []
-}
+  link: string;
+  pubDate: Date;
+  title: string;
+  description: string;
+  category: string;
+  tags?: [];
+};
 interface Props {
   data: dataType;
 }
@@ -21,7 +21,9 @@ const { data } = Astro.props;
     class="flex flex-col max-w-xl items-start justify-between border p-5 rounded-xl bg-white hover:shadow-md"
   >
     <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-16" class="text-gray-500">{formatDate(data.pubDate)}</time>
+      <time datetime={formatDate(data.pubDate)} class="text-gray-500"
+        >{formatDate(data.pubDate)}</time
+      >
       <span
         class="relative rounded-full bg-gradient-to-r from-[#0f6cbd] to-[#3c45ab] text-white px-3 py-1.5 font-medium"
         >{data.category}</span
