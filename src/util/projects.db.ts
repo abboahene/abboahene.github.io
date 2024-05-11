@@ -37,7 +37,7 @@ const projects: Projects[] = [
     title: "RFID Attendance System",
     description:
       "Utilizes RFID tags, readers, and a communication protocol to seamlessly log attendance data, enabling real-time monitoring and analysis.",
-    url: "github.com/blackmann/ManyThings",
+    url: "https://github.com/abboahene/rfid-attendance",
     githubUrl: "https://github.com/abboahene/rfid-attendance",
     image: rfidAttendanceImage.src,
   },
