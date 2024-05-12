@@ -1,19 +1,6 @@
-### Had to make it - My personal website with Astro
+### Had to make it.
 
 > 🧑‍🚀 **Let's go!!!**
-#### 🚀 Project Structure
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+![Website preview](./public/my-site.png)
 
