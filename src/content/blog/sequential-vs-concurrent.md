@@ -25,11 +25,11 @@ A **thread** is the smallest unit of execution in a computer system. A single ta
 
 Remember the task you divided among your friends? In that case, each of your friends is a **thread** working on different parts of the task you were assigned 🧵.
 
+Threads enable us to achieve concurrency/parallelism for a set of tasks in a program. It simply allows for tasks to be executed “at the same time”.
+
 ### Sequential programs
 
 Sequential programs are single-threaded programs, which means all tasks are executed in a step-by-step manner, and the next task is only executed when the current one is done.
-
-Threads enable us to achieve concurrency/parallelism for a set of tasks in a program. It simply allows for tasks to be executed “at the same time”.
 
 ### Parallel Execution
 
